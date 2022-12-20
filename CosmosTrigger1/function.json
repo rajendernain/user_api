@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "CosmosDbConnectionString",
+      "databaseName": "cellchk",
+      "collectionName": "battery_logs",
+      "createLeaseCollectionIfNotExists": false
+    },
+    {
+      "type": "signalR",
+      "name": "signalRMessages",
+      "hubName": "serverless",
+      "connectionStringSetting": "AzureSignalRConnectionString",
+      "direction": "out"
+    }
+  ]
+}

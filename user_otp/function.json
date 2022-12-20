@@ -1,0 +1,20 @@
+﻿{
+  "bindings": [
+    {
+      "name": "req",
+      "authLevel": "anonymous",
+      "methods": [
+        "post"
+      ],
+      "direction": "in",
+      "type": "httpTrigger",
+      "route": "user/otp"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ],
+      "route": "device/details"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+
+    },    
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "batterydetailDbObj",
+      "databaseName": "cellchk",
+      "collectionName": "battery_detail",
+      "createIfNotExists": false,
+      "connectionStringSetting": "CosmosDbConnectionString"
+
+    }
+  ]
+}
